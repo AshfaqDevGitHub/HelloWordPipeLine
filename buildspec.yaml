@@ -1,9 +1,7 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      docker: 19
+  build:
     commands:
       - echo "Building Docker image..."
       - docker-compose -f docker-compose.yml build
