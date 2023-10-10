@@ -2,8 +2,11 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      docker: 19
     commands:
-      - docker-compose build -d
+      - echo "Building Docker image..."
+      - docker-compose -f docker-compose.yml build
 
 artifacts:
   files: docker-compose.yml
